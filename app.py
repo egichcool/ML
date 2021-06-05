@@ -4,7 +4,8 @@ from werkzeug.utils import secure_filename
 from model import Model
 
 
-UPLOAD_FOLDER = 'D:/PycharmProjects/ML_Project/static/uploads'
+ROOT_FOLDER = os.path.abspath(os.path.dirname(__file__))
+UPLOAD_FOLDER = os.path.join(ROOT_FOLDER, 'static/uploads')
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
 app = Flask(__name__)
